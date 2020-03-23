@@ -1,0 +1,201 @@
+<!--样式header-->
+{include file="public/header"}
+<title>图书列表</title>
+<!--头部-->
+{include file="public/head_pc"}
+
+
+	<div class="head">
+		<div class="wrap clearfix">
+			<!--图书搜索-->
+			{include file="public/book_seach"}
+
+			<!--图书分类-->
+			{include file="public/book_class"}
+		</div>
+	</div>
+
+	
+	<div class="tjmd">
+		<div class="wrap clearfix">
+			<div class="bl1">
+				<h4 class="bl1tit">全部图书“<i>马云说</i>”</h4>
+				<div class="bl1width">
+					<div class="bl1w clearfix">
+						<span class="fl">分类</span>
+						<div class="fr bl1wr posrelative">
+							<a href="javascript:">成功/励志(3)</a>
+							<a href="javascript:">未分类(2)</a>
+							<a href="javascript:">管理(1)</a>
+							<a href="javascript:">传记(1)</a>
+						</div>
+					</div>
+					<div class="bl1w clearfix">
+						<span class="fl">出版社</span>
+						<div class="fr bl1wr posrelative">
+							<a href="javascript:">台海出版社</a>
+							<a href="javascript:">文化发展出版社</a>
+							<a href="javascript:">文化艺术出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">中国社会科学出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">中国社会科学出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">中国社会科学出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">江西人民出版社</a>
+							<a href="javascript:">中国社会科学出版社</a>
+							<div class="rmorea clearfix">
+								<a href="javascript:" class="fl">+多选</a>
+								<i class="rmoreai_1 fr">更多<em class="fa fa-angle-down ml5"></em></i>
+								<i class="rmoreai_2 fr">收起<em class="fa fa-angle-up ml5"></em></i>
+							</div>
+						</div>
+					</div>
+					<div class="bl1w clearfix">
+						<span class="fl">作者</span>
+						<div class="fr bl1wr posrelative">
+							<a href="javascript:">吴帝聪</a>
+							<a href="javascript:">王国章</a>
+							<a href="javascript:">优米网</a>
+							<a href="javascript:">周高华</a>
+							<a href="javascript:">马云</a>
+							<a href="javascript:">王力</a>
+							<div class="rmorea clearfix">
+								<a href="javascript:" class="fl">+多选</a>
+								<i class="rmoreai_1 fr">更多<em class="fa fa-angle-down ml5"></em></i>
+								<i class="rmoreai_2 fr">收起<em class="fa fa-angle-up ml5"></em></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bl2 mt_40">
+				<div class="bl2top clearfix">
+					<div class="fl clearfix bl2tl">
+						<a href="javascript:" class="active">综合排序</a>
+						<a href="javascript:">销量<i class="fa fa-caret-down ml5"></i></a>
+						<a class="clearfix" href="javascript:"><em class="fl">出版时间</em><span class="ml5 bl2tlsp fl"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span></a>
+						<a class="clearfix" href="javascript:"><em class="fl">售价</em><span class="ml5 bl2tlsp fl"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span></a>
+						<a class="clearfix" href="javascript:"><em class="fl">上架时间</em><span class="ml5 bl2tlsp fl"><i class="fa fa-caret-up"></i><i class="fa fa-caret-down"></i></span></a>
+					</div>
+					<script type="text/javascript">
+						$(function(){
+						   $(".bl2tl a").click(function(){
+						   	$(".bl2tl a").removeClass("active");
+						   	$(this).addClass("active");
+						   })
+						});
+					</script>
+					<div class="fr bl2tr clearfix">
+						<span class="fl">共找到<i class="colorindex">7</i>本图书</span>
+						<div class="bl2trpg fl">
+							<a href="" class="fa fa-caret-left"></a>
+							<span><i class="colorindex">1</i>/2</span>
+							<a href="" class="fa fa-caret-right active"></a>
+						</div>
+					</div>
+				</div>
+				<div class="bl2bot">
+					<div class="cxra cxracp clearfix">
+						<a href="bookinfo.html" class="fl cxraimg">
+							<img src="{$Think.INDEX_SITE_ROOT}/images/zwt_03.png"/>
+						</a>
+						<div class="fr cxratxt">
+							<a href="bookinfo.html" class="cxratxta1">上海古籍版四大名著-精装本（含藏书）</a>
+							<p>著者：吴帝聪</p>
+							<p>出版时间：2015-01-01</p>
+							<p>出版社：台海出版社</p>
+							<div class="cxratxt1"><i>¥23.5</i>（6.7折）<em>¥35.0</em></div>
+							<p class="cxracp_p">马云成为中国新一代首富，85%凭借他有一副“一开口，就能说服所有人”的口才！ ◎你是不是也像当年的马云一样：一没资金，二没背景，三没技术？不过没关系，马云教你如何练就一副横扫三军、所向披靡的口才。有了口才就有钱财！ ◎你讲话时，是...</p>
+							<div class="cxratxtbot">
+								<a href="bookinfo.html" class="active">购买</a>
+								<a href="">收藏</a>
+							</div>
+						</div>
+					</div>
+					<div class="cxra cxracp clearfix">
+						<a href="bookinfo.html" class="fl cxraimg">
+							<img src="{$Think.INDEX_SITE_ROOT}/images/mybook_03.jpg"/>
+						</a>
+						<div class="fr cxratxt">
+							<a href="bookinfo.html" class="cxratxta1">上海古籍版四大名著-精装本（含藏书）</a>
+							<p>著者：吴帝聪</p>
+							<p>出版时间：2015-01-01</p>
+							<p>出版社：台海出版社</p>
+							<div class="cxratxt1"><i>¥23.5</i>（6.7折）<em>¥35.0</em></div>
+							<p class="cxracp_p">马云成为中国新一代首富，85%凭借他有一副“一开口，就能说服所有人”的口才！ ◎你是不是也像当年的马云一样：一没资金，二没背景，三没技术？不过没关系，马云教你如何练就一副横扫三军、所向披靡的口才。有了口才就有钱财！ ◎你讲话时，是...</p>
+							<div class="cxratxtbot">
+								<a href="bookinfo.html" class="active">购买</a>
+								<a href="">收藏</a>
+							</div>
+						</div>
+					</div>
+					<div class="cxra cxracp clearfix">
+						<a href="bookinfo.html" class="fl cxraimg">
+							<img src="{$Think.INDEX_SITE_ROOT}/images/mybook_03.jpg"/>
+						</a>
+						<div class="fr cxratxt">
+							<a href="bookinfo.html" class="cxratxta1">上海古籍版四大名著-精装本（含藏书）</a>
+							<p>著者：吴帝聪</p>
+							<p>出版时间：2015-01-01</p>
+							<p>出版社：台海出版社</p>
+							<div class="cxratxt1"><i>¥23.5</i>（6.7折）<em>¥35.0</em></div>
+							<p class="cxracp_p">马云成为中国新一代首富，85%凭借他有一副“一开口，就能说服所有人”的口才！ ◎你是不是也像当年的马云一样：一没资金，二没背景，三没技术？不过没关系，马云教你如何练就一副横扫三军、所向披靡的口才。有了口才就有钱财！ ◎你讲话时，是...</p>
+							<div class="cxratxtbot">
+								<a href="bookinfo.html" class="active">购买</a>
+								<a href="">收藏</a>
+							</div>
+						</div>
+					</div>
+					<div class="cxra cxracp clearfix">
+						<a href="bookinfo.html" class="fl cxraimg">
+							<img src="{$Think.INDEX_SITE_ROOT}/images/mybook_03.jpg"/>
+						</a>
+						<div class="fr cxratxt">
+							<a href="bookinfo.html" class="cxratxta1">上海古籍版四大名著-精装本（含藏书）</a>
+							<p>著者：吴帝聪</p>
+							<p>出版时间：2015-01-01</p>
+							<p>出版社：台海出版社</p>
+							<div class="cxratxt1"><i>¥23.5</i>（6.7折）<em>¥35.0</em></div>
+							<p class="cxracp_p">马云成为中国新一代首富，85%凭借他有一副“一开口，就能说服所有人”的口才！ ◎你是不是也像当年的马云一样：一没资金，二没背景，三没技术？不过没关系，马云教你如何练就一副横扫三军、所向披靡的口才。有了口才就有钱财！ ◎你讲话时，是...</p>
+							<div class="cxratxtbot">
+								<a href="bookinfo.html" class="active">购买</a>
+								<a href="">收藏</a>
+							</div>
+						</div>
+					</div>
+					<div class="page mt_50 textcenter">
+						<a class="active" href="">1</a>
+						<a href="">2</a>
+						<a href="">...</a>
+						<span>到<input class="pageipt1" type="text" name="" id="" value="" />页</span>
+						<input class="pageipt2 hoverop" type="submit" name="" id="" value="确定" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+
+	
+	<script type="text/javascript">
+		$(".rmoreai_1").click(function(){
+			var pt = $(this).parent(".rmorea").parent(".bl1wr");
+			$(this).hide();
+			$(this).siblings(".rmoreai_2").show();
+			$(pt).toggleClass("bl1wr_active");
+		})
+		$(".rmoreai_2").click(function(){
+			var pt = $(this).parent(".rmorea").parent(".bl1wr");
+			$(this).hide();
+			$(this).siblings(".rmoreai_1").show();
+			$(pt).toggleClass("bl1wr_active");
+		})
+	</script>
+
+	<!--底部-->
+	{include file="public/footer"}

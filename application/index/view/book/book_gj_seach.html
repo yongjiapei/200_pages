@@ -1,0 +1,201 @@
+<!--样式header-->
+{include file="public/header"}
+<title>搜索</title>
+<!--头部-->
+{include file="public/head_pc"}
+
+
+<div class="head">
+    <div class="wrap clearfix">
+        <!--图书搜索-->
+        {include file="public/book_seach"}
+
+        <!--图书分类-->
+        {include file="public/book_class"}
+    </div>
+</div>
+
+<div class="lmd">
+    <div class="wrap clearfix">
+        <div class="lgwidth scwidth">
+            <div class="scwb clearfix">
+                <div class="fl scwbl">
+                    基本条件
+                </div>
+                <div class="fr scwbr">
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">书名</span>
+                        <div class="fr scwbr1r">
+                            <input class="scwbr1ript" type="text" name="book_name" id="book_name" value="" />
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">作者/译者</span>
+                        <div class="fr scwbr1r">
+                            <input class="scwbr1ript" type="text" name="book_author" id="book_author" value="" />
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">关键词</span>
+                        <div class="fr scwbr1r">
+                            <input class="scwbr1ript" type="text" name="book_subject" id="book_subject" value="" />
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">出版社</span>
+                        <div class="fr scwbr1r">
+                            <input class="scwbr1ript" type="text" name="book_press" id="book_press" value="" />
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">ISBN</span>
+                        <div class="fr scwbr1r">
+                            <input class="scwbr1ript" type="text" name="book_isbn" id="book_isbn" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scwb clearfix">
+                <div class="fl scwbl">
+                    基本条件
+                </div>
+                <div class="fr scwbr">
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">包装</span>
+                        <div class="fr scwbr1r scwbr1r_check clearfix" id="book_pack">
+                            <label data-val="精装">
+                                <i></i>精装
+                                <!--<input type="checkbox" name="bookpack" id="bookpack" value="" />-->
+                            </label>
+                            <label data-val="平装">
+                                <i></i>平装
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                            <label data-val="线装">
+                                <i></i>线装
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                            <label data-val="挂图">
+                                <i></i>挂图
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                            <label data-val="盒装">
+                                <i></i>盒装
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                            <label data-val="袋装">
+                                <i></i>袋装
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                            <label data-val="软精装">
+                                <i></i>软精装
+                                <!--<input type="checkbox" name="" id="" value="" />-->
+                            </label>
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">分类</span>
+                        <div class="fr scwbr1r scwbr1r_select scwbr1r_select1 clearfix">
+                            <select name="book_classify" id="book_classify">
+                                <option>22大分类筛选</option>
+                                <option>分类一</option>
+                                <option>分类一</option>
+                                <option>分类一</option>
+                                <option>分类一</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">价格区间</span>
+                        <div class="fr scwbr1r scwbr1r_radio clearfix">
+                            <div class="scradio clearfix">
+                                <i class="fl active"><input type="radio" name="jg" value="1" checked="checked" /></i>
+                                <div class="fl scradior">
+                                    原价&nbsp;&nbsp;<input type="text" name="book_price_1" id="book_price_1" value="" />
+                                    &nbsp;&nbsp;至&nbsp;&nbsp;<input type="text" name="book_price_2" id="book_price_2" value="" />
+                                </div>
+                            </div>
+                            <div class="scradio clearfix">
+                                <i class="fl"><input type="radio" name="jg" value="2" /></i>
+                                <div class="fl scradior">
+                                    现价&nbsp;&nbsp;<input type="text" name="book_present_1" id="book_present_1" value="" />
+                                    &nbsp;&nbsp;至&nbsp;&nbsp;<input type="text" name="book_present_2" id="book_present_2" value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">折扣</span>
+                        <div class="fr scwbr1r scwbr1r_select clearfix">
+                            <select name="book_discount_1">
+                                <option value="0.1">1折</option>
+                                <option value="0.2">2折</option>
+                                <option value="0.3">3折</option>
+                                <option value="0.4">4折</option>
+                                <option value="0.5">5折</option>
+                                <option value="0.6">6折</option>
+                                <option value="0.7">7折</option>
+                                <option value="0.8">8折</option>
+                                <option value="0.9">9折</option>
+                            </select>
+                            <span>--</span>
+                            <select name="book_discount_2">
+                                <option value="0.1">1折</option>
+                                <option value="0.2">2折</option>
+                                <option value="0.3">3折</option>
+                                <option value="0.4">4折</option>
+                                <option value="0.5">5折</option>
+                                <option value="0.6">6折</option>
+                                <option value="0.7">7折</option>
+                                <option value="0.8">8折</option>
+                                <option value="0.9">9折</option>
+                            </select>
+                            <span>(格式：1折－9折)</span>
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">出版时间区间</span>
+                        <div class="fr scwbr1r scwbr1r_select clearfix">
+                            <select name="book_press_date_1_year" id="book_press_date_1_year"></select>
+                            <span>年</span>
+                            <select name="book_press_date_1_month" id="book_press_date_1_month"></select>
+                            <span>月</span>
+                            <span>--</span>
+                            <select name="book_press_date_2_year" id="book_press_date_2_year"></select>
+                            <span>年</span>
+                            <select name="book_press_date_2_month" id="book_press_date_2_month"></select>
+                            <span>月</span>
+                        </div>
+                    </div>
+                    <div class="scwbr1 clearfix">
+                        <span class="fl">包装</span>
+                        <div class="fr scwbr1r scwbr1r_check clearfix">
+                            <label>
+                                <i></i>仅显示有货
+                                <input type="checkbox" name="" id="" value="" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="scwbrsbm textcenter">
+                        <input class="hoverop" type="submit" name="" id="" value="搜索" /><a href="">清空搜索条件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(".scwbr1r_check label").click(function(e){
+        $(this).toggleClass("active");
+        e.stopPropagation();
+    })
+    $(".scradio i").click(function(e){
+        $(".scradio i").removeClass("active");
+        $(this).addClass("active");
+        e.stopPropagation();
+    })
+</script>
+
+{include file="public/footer"}

@@ -1,0 +1,147 @@
+<!--样式header-->
+{include file="public/header"}
+<title>{$site.name}-登录</title>
+<!--头部-->
+{include file="public/head_pc"}
+
+<!--顶部广告-->
+{include file="public/top"}
+
+<div class="lmd">
+    <div class="wrap clearfix">
+        <div class="lgwidth">
+            <div class="lgtit">
+                <span></span>用户登录
+            </div>
+            <div class="textcenter">
+                <div class="lgw mt_40">
+                    <div class="clearfix lgb">
+                        <span class="fl">用户名：</span>
+                        <div class="fr lgbr lgbrinput">
+                            <input type="text" placeholder="用户名/邮箱/手机号" name="" id="account" value="" />
+                        </div>
+                    </div>
+                    <div class="clearfix lgb">
+                        <span class="fl">密码：</span>
+                        <div class="fr lgbr lgbrinput">
+                            <input type="password" placeholder="请输入密码" name="" id="password" value="" />
+                        </div>
+                    </div>
+                    <!--<div class="clearfix lgb">-->
+                        <!--<span class="fl">验证码：</span>-->
+                        <!--<div class="fr lgbr lgbrinput lgbrinputcp clearfix">-->
+                            <!--<input class="fl" type="text" placeholder="请输入验证码" name="" id="code" value="" />-->
+                            <!--<div class="code fl"><img src="{$Think.INDEX_SITE_ROOT}/images/code_03.png"/></div>-->
+                            <!--<i class="fr">换一个</i>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="clearfix lgb">
+                        <span class="fl"></span>
+                        <div class="fr lgbr lgbrsbm">
+                            <input type="submit" class="hoverop" name="" onclick="login()" value="登录" />
+                        </div>
+                    </div>
+                    <div class="clearfix lgb">
+                        <span class="fl"></span>
+                        <div class="fr lgbr lgbra clearfix">
+                            <a href="" class="fl">忘记密码？</a>
+                            <a href="{:url('user/register')}" class="fr">新用户注册</a>
+                        </div>
+                    </div>
+                    <div class="clearfix lgb">
+                        <span class="fl"></span>
+                        <div class="fr lgbr lgbrline posrelative textcenter mt_10">
+                            <span>使用第三方登录</span>
+                        </div>
+                    </div>
+                    <div class="clearfix lgb">
+                        <span class="fl"></span>
+                        <div class="fr lgbr lgbrb textcenter mt_20">
+                            <a href="">
+                                <img class="middle" src="{$Think.INDEX_SITE_ROOT}/images/lgico1_03.png"/>微信
+                            </a>
+                            <i></i>
+                            <a href="">
+                                <img class="middle" src="{$Think.INDEX_SITE_ROOT}/images/lgico2_03.png"/>QQ
+                            </a>
+                            <i></i>
+                            <a href="">
+                                <img class="middle" src="{$Think.INDEX_SITE_ROOT}/images/lgico3_03.png"/>微博
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function login(){
+
+        var account=$('#account').val();
+        var password=$('#password').val();
+
+        if(account==''||account.length==0){
+            layer.msg('请输入用户名');
+            return false;
+        }
+
+        if(password==''||password.length==0){
+            layer.msg('请输入密码');
+            return false;
+        }
+
+        var data = {
+            "account": account,
+            "password": password
+        };
+
+        var url=domain+'/apipc/user/login';
+
+
+        ajax_submit(url,data);
+
+        /**
+         * Layer通用接口
+         * @param {type} url 链接地址
+         * @returns {undefined}
+         */
+        function ajax_submit(url,data) {
+
+            $.ajax({
+                url: url,
+                data: data,
+                method: "POST",
+
+                dataType:'json',
+                success: function (res) {
+
+                    var date=res.data;
+                    layer.msg(res.msg, {time: 1000}, function () {
+                        if (res.code == 1) {
+                            // console.log(data);
+                            localStorage.setItem('token',date.userinfo['token']);
+                            localStorage.setItem('user_id',date.userinfo['user_id']);
+                            localStorage.setItem('expiretime',date.userinfo['expiretime']);
+                            localStorage.setItem('info',date.userinfo);
+                            location.href="{:url('index/index/index')}";
+
+                        }else{
+                            return false;
+                        }
+                    });
+                },
+                error:function (data) {
+                    layer.msg('网络错误');
+                    return false;
+                }
+            })
+        }
+
+
+    }
+</script>
+
+<!--底部-->
+{include file="public/footer"}
+
